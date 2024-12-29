@@ -15,7 +15,8 @@ public class Snake extends KeyAdapter{
      */
     public static void main(String[] args) {
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize(); 
-        int windowSize = 800;
+        //DO NOT CHANGE WINDOW SIZE
+        int windowSize = 799;
         
         System.out.println("Snake!");
         System.out.println("By: Jordan H");
@@ -33,6 +34,7 @@ public class Snake extends KeyAdapter{
         gameWindow.setVisible(true);
         
         //Fill the game window
-        
+        Tile t = new Tile();
+        t.createNewTile(0,0);
     }
 }
