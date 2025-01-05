@@ -21,20 +21,16 @@ public class Snake extends KeyAdapter{
         System.out.println("Snake!");
         System.out.println("By: Jordan H");
         
-        //Create the game window
-        JFrame gameWindow = new JFrame("Snake!");
+        GameBoard board = new GameBoard();
+        board.setVisible(true);
         
-        gameWindow.setSize(windowSize, windowSize);
-        gameWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        gameWindow.addKeyListener(new InputListener());
-        gameWindow.getContentPane().setBackground(Color.black);
-        gameWindow.setResizable(false);
-        gameWindow.setLocationRelativeTo(null);
+        board.setSize(windowSize, windowSize);
+        board.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        board.addKeyListener(new InputListener());
+        board.getContentPane().setBackground(Color.black);
+        board.setResizable(false);
+        board.setLocationRelativeTo(null);
         
-        gameWindow.setVisible(true);
-        
-        //Fill the game window
-        Tile t = new Tile();
-        t.createNewTile(0,0);
+        // fill game board
     }
 }
