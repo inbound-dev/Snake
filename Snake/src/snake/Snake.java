@@ -16,7 +16,7 @@ public class Snake extends KeyAdapter{
     public static void main(String[] args) {
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize(); 
         //DO NOT CHANGE WINDOW SIZE
-        int windowSize = 799;
+        int windowSize = 599;
         
         System.out.println("Snake!");
         System.out.println("By: Jordan H");
@@ -24,7 +24,6 @@ public class Snake extends KeyAdapter{
         GameBoard board = new GameBoard();
         board.setVisible(true);
         
-        board.setSize(windowSize, windowSize);
         board.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         board.addKeyListener(new InputListener());
         board.getContentPane().setBackground(Color.black);
