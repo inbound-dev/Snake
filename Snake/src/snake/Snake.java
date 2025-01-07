@@ -31,5 +31,6 @@ public class Snake extends KeyAdapter{
         board.setLocationRelativeTo(null);
         
         // fill game board
+        GameFunctions.DrawBoard();
     }
 }
