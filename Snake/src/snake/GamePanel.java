@@ -4,8 +4,6 @@ package snake;
 import java.awt.Graphics;
 import java.awt.Panel;
 import java.awt.Color;
-import java.awt.Dimension;
-import static snake.Snake.gameUnits;
 import static snake.Snake.unitSize;
 import static snake.Snake.windowSize;
 /**
@@ -29,7 +27,6 @@ public class GamePanel extends Panel{
         for(int i = 0; i <= (windowSize/unitSize); i++){
             g.drawLine(i*unitSize, 0, i*unitSize, windowSize);
             g.drawLine(0, i*unitSize, windowSize, i*unitSize);
-            System.out.println(i*unitSize);
         }
     }
 }

@@ -18,8 +18,6 @@ public class Snake{
 
         static boolean running = true;
         
-        static GamePanel gamePanel = new GamePanel();
-        
     /**
      * @param args the command line arguments
      */
@@ -29,8 +27,7 @@ public class Snake{
         
         //cerates a new instance of the gameboard
         GameBoard board = new GameBoard();
-        Dimension d = new Dimension(windowSize,windowSize);
-        board.setSize(d);
+        board.setSize(windowSize, windowSize);
         
         //assigns the pannel class created above to the game board
         board.setContentPane(new GamePanel());
