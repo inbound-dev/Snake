@@ -13,10 +13,10 @@ import java.util.Set;
  */
 public class Snake{
     //DO NOT CHANGE WINDOW SIZE
-        static int windowSize = 600;
+        public static int windowSize = 600;
         
         static int unitSize = 25;
-        static int gameUnits = windowSize/unitSize;
+        static int gameUnits = (windowSize * windowSize)/unitSize;
         int x[] = new int[gameUnits];
         int y[] = new int[gameUnits];
 
@@ -36,8 +36,7 @@ public class Snake{
         
         //assigns the pannel class created above to the game board
         board.setContentPane(new GamePanel());
-        board.add(new GamePanel());
-        
+              
         board.setVisible(true);   
         board.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         board.addKeyListener(new InputListener());
@@ -56,17 +55,4 @@ public class Snake{
             
         }
     }
-    
-    
-    //draws the game board
-    public void DrawBoard(Graphics g){
-        for(int i = 0; i <= gameUnits; i++){
-            g.drawLine(i*gameUnits, 0, i*unitSize, windowSize);
-        }
-    }
-    
-    public static void CreateApple(){
-        
-    }
-    
 }
