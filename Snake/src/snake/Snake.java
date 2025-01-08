@@ -11,7 +11,7 @@ import java.util.Set;
  *
  * @author Jordan H.
  */
-public class Snake extends KeyAdapter{
+public class Snake{
     //DO NOT CHANGE WINDOW SIZE
         static int windowSize = 600;
         
@@ -23,6 +23,7 @@ public class Snake extends KeyAdapter{
         static boolean running = true;
         
         static GamePanel gamePanel = new GamePanel();
+        
     /**
      * @param args the command line arguments
      */
@@ -30,9 +31,14 @@ public class Snake extends KeyAdapter{
         System.out.println("Snake!");
         System.out.println("By: Jordan H");
         
+        //cerates a new instance of the gameboard
         GameBoard board = new GameBoard();
-        board.setVisible(true);
         
+        //assigns the pannel class created above to the game board
+        board.setContentPane(new GamePanel());
+        board.add(new GamePanel());
+        
+        board.setVisible(true);   
         board.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         board.addKeyListener(new InputListener());
         board.setResizable(false);
@@ -43,10 +49,6 @@ public class Snake extends KeyAdapter{
         //pre game loop steps
         //DrawBoard();
         //CreateApple();
-        
-        //assigns the pannel class created above to the game board
-        board.setContentPane(gamePanel);
-        gamePanel.setBackground(Color.black);
 
         
         //main game loop 
