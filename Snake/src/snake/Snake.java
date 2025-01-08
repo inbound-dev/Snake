@@ -1,14 +1,15 @@
 package snake;
 
 import Classes.*;
+import java.awt.Dimension;
 import javax.swing.*;
 /**
  *
  * @author Jordan H.
  */
 public class Snake{
-    //DO NOT CHANGE WINDOW SIZE
-        public static int windowSize = 600;
+    //DO NOT CHANGE WINDOW SIZE 586
+        public static int windowSize = 586;
         
         static int unitSize = 25;
         static int gameUnits = (windowSize * windowSize)/unitSize;
@@ -28,6 +29,8 @@ public class Snake{
         
         //cerates a new instance of the gameboard
         GameBoard board = new GameBoard();
+        Dimension d = new Dimension(windowSize,windowSize);
+        board.setSize(d);
         
         //assigns the pannel class created above to the game board
         board.setContentPane(new GamePanel());
@@ -38,17 +41,10 @@ public class Snake{
         board.addKeyListener(new InputListener());
         board.setResizable(false);
         board.setLocationRelativeTo(null);
-        board.setSize(windowSize, windowSize);
-        
-        
-        //pre game loop steps
-        //DrawBoard();
-        //CreateApple();
-
         
         //main game loop 
-//        while(running == true){
-//            
-//        }
+        while(running == true){
+            
+        }
     }
 }
