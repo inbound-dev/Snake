@@ -16,7 +16,7 @@ public class GamePanel extends Panel{
     public Color currColor = Color.GRAY;
     
     //overrides the defualt paint method to paint desired objects on the screen
-   @Override public void paint(Graphics g){
+    @Override public void paint(Graphics g){
         super.setBackground(panelColor);
         super.paint(g);
         g.setColor(currColor);
@@ -27,7 +27,7 @@ public class GamePanel extends Panel{
     public void DrawBoard(Graphics g){
         for(int i = 0; i <= windowSize/unitSize; i++){
             g.drawLine(i*unitSize, 0, i*unitSize, windowSize);
-            System.out.println(i*unitSize);
+            //System.out.println(i*unitSize);
         }
     }
 }

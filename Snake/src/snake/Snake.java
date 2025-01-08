@@ -2,11 +2,6 @@ package snake;
 
 import Classes.*;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.Graphics;
-import java.util.HashSet;
-import java.util.Set;
 /**
  *
  * @author Jordan H.
@@ -37,6 +32,7 @@ public class Snake{
         //assigns the pannel class created above to the game board
         board.setContentPane(new GamePanel());
               
+        // all the misc jframe settings
         board.setVisible(true);   
         board.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         board.addKeyListener(new InputListener());
@@ -51,8 +47,8 @@ public class Snake{
 
         
         //main game loop 
-        while(running == true){
-            
-        }
+//        while(running == true){
+//            
+//        }
     }
 }
