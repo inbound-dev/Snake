@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package snake;
 
 /**
  *
- * @author Jorda
+ * @author Jordan
  */
 public class GameBoard extends javax.swing.JFrame {
 
@@ -28,7 +24,6 @@ public class GameBoard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(599, 599));
-        setPreferredSize(new java.awt.Dimension(599, 599));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
