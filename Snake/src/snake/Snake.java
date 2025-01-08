@@ -27,10 +27,15 @@ public class Snake{
         
         //cerates a new instance of the gameboard
         GameBoard board = new GameBoard();
-        board.setSize(windowSize, windowSize);
+        
+        Dimension size = new Dimension(windowSize,windowSize);
+        GamePanel gamePanel = new GamePanel();
+        board.setPreferredSize(size);
         
         //assigns the pannel class created above to the game board
-        board.setContentPane(new GamePanel());
+        board.setContentPane(gamePanel);
+        
+        board.pack();
               
         // all the misc jframe settings
         board.setVisible(true);   
