@@ -4,6 +4,8 @@ package snake;
 import java.awt.Graphics;
 import java.awt.Panel;
 import java.awt.Color;
+import java.util.Random;
+import static snake.Snake.boardUnitLength;
 import static snake.Snake.unitSize;
 import static snake.Snake.windowSize;
 /**
@@ -28,5 +30,14 @@ public class GamePanel extends Panel{
             g.drawLine(i*unitSize, 0, i*unitSize, windowSize);
             g.drawLine(0, i*unitSize, windowSize, i*unitSize);
         }
+    }
+    
+    public static void drawApple(Graphics g){
+        Random randint = new Random();  
+        int randX = randint.nextInt(boardUnitLength);
+        int randY = randint.nextInt(boardUnitLength);
+
+        System.out.println("Current Apple Coords: " + randX + ", " + randY);
+        
     }
 }
